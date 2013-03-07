@@ -1,2 +1,10 @@
-<h1>CardWall#show</h1>
-<p>Find me in app/views/card_wall/show.html.erb</p>
+<h1>Wingle</h1>
+<%= field_set_tag nil do %>
+  <%= field_set_tag 'Title' do %>
+    <p><%= text_field_tag 'title' %></p>
+  <% end %>
+
+  <%= field_set_tag 'Description' do %>
+    <p><%= text_area_tag 'description' %></p>
+  <% end %>
+<% end %>
