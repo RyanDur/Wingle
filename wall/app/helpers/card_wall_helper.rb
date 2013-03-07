@@ -1,0 +1,2 @@
+module CardWallHelper
+end

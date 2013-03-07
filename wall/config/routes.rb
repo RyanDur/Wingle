@@ -1,4 +1,8 @@
 Wall::Application.routes.draw do
+  get "card_wall/wall"
+
+  get "card_wall/card"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
