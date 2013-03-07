@@ -1,4 +1,4 @@
 class CardWallController < ApplicationController
-  def wall
+  def show
   end
 end

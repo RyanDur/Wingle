@@ -1,4 +1,6 @@
 Wall::Application.routes.draw do
+  get "card_wall/show"
+
   get "card_wall/wall"
 
   get "card_wall/card"
