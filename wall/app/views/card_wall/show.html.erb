@@ -1,10 +1,18 @@
+<% provide :title, 'Card Wall' %>
 <h1>Wingle</h1>
-<%= field_set_tag nil do %>
-  <%= field_set_tag 'Title' do %>
-    <p><%= text_field_tag 'title' %></p>
+<div ng-controller="CardsCtrl">
+  <%= field_set_tag "Card Wall" do %>
+    <form ng-submit="addCard()">
+      <input type="text" ng-model="card.title"/>
+      <textarea ng-model="card.description"></textarea>
+      <input type="submit" value="Add"/>
+    </form>
   <% end %>
 
-  <%= field_set_tag 'Description' do %>
-    <p><%= text_area_tag 'description' %></p>
-  <% end %>
-<% end %>
+  <ul>
+    <li ng-repeat="card in cards">
+      {{card.title}}
+      {{card.description}}
+    </li>
+  </ul>
+</div>
