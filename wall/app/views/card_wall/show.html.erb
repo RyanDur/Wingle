@@ -1,5 +1,18 @@
-<% provide :title, 'Card Wall' %>
+<% provide :title, "Card Wall" %>
 <div ng-controller="CardsCtrl">
+  <div class="error_list">
+    <ul>
+      <li ng-repeat="(key, value) in errors">
+        {{key}}
+        <ul>
+          <li ng-repeat="item in value">
+	    {{item}}
+	  </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
   <%= field_set_tag "Card Wall" do %>
     <form ng-submit="addCard()">
       <div class="title">
@@ -14,16 +27,18 @@
     </form>
   <% end %>
 
-  <div class="card_list">
-    <ul>
-      <li ng-repeat="card in cards">
-        <div class="title_content">
-          {{card.title}}
-        </div>
-        <div class="description_content">
-          {{card.description}}
-        </div>
-      </li>
-    </ul>
-  </div>
+  <ul>
+    <li ng-repeat="card in cards">
+      <div class="card">
+        <%= field_set_tag "{{card.id}}" do %>
+          <div class="title_content">
+            {{card.title}}
+          </div>
+          <div class="description_content">
+            {{card.description}}
+          </div>
+        <% end %>
+      </div>
+    </li>
+  </ul>
 </div>
