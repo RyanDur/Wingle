@@ -1,44 +1,31 @@
 <% provide :title, "Card Wall" %>
 <div ng-controller="CardsCtrl">
-  <div class="error_list">
-    <ul>
-      <li ng-repeat="(key, value) in errors">
-        {{key}}
-        <ul>
-          <li ng-repeat="item in value">
-	    {{item}}
-	  </li>
-        </ul>
-      </li>
-    </ul>
+  <div class="error_list" ng-repeat="(key, value) in errors">
+    <div ng-repeat="item in value">
+      {{key}} {{item}}
+    </div>
   </div>
 
-  <%= field_set_tag "Card Wall" do %>
-    <form ng-submit="addCard()">
+  <div class="card_wall" >
+    <%= field_set_tag "Card Wall" do %>
       <div class="title">
         <input type="text" ng-model="card.title"/>
       </div>
       <div class="description">
         <textarea ng-model="card.description"></textarea>
       </div>
-      <div class="submit">
-        <input type="submit" value="Add"/>
-      </div>
-    </form>
-  <% end %>
+      <button ng-click="create(card)">Add</button>
+    <% end %>
+  </div>
 
-  <ul>
-    <li ng-repeat="card in cards">
-      <div class="card">
-        <%= field_set_tag "{{card.id}}" do %>
-          <div class="title_content">
-            {{card.title}}
-          </div>
-          <div class="description_content">
-            {{card.description}}
-          </div>
-        <% end %>
+  <div ng-repeat="card in cards" class="card">
+    <%= field_set_tag "{{card.id}}" do %>
+      <div contenteditable="true" ng-model="card.title" ng-bind="card.title">
       </div>
-    </li>
-  </ul>
+      <div contenteditable="true" ng-model="card.description" ng-bind="card.description">
+      </div>
+      <button ng-click="update(card)">Update
+      </button>
+    <% end %>
+  </div>
 </div>
