@@ -1,0 +1,7 @@
+source :rubygems
+
+gem 'sinatra'
+gem 'mingle_party'
+gem 'sinatra-cross_origin'
+gem 'rack-cors'
+gem 'sinatra-jsonp'

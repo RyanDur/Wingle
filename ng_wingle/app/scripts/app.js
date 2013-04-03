@@ -1,17 +1,19 @@
 'use strict';
 
-angular.module('ngWingleApp', [])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/Wall', {
-        templateUrl: 'views/Wall.html',
-        controller: 'WallCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+angular.module('ngWingleApp',["ngResource"])
+    .config(function ($routeProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: 'views/main.html',
+                controller: 'MainCtrl'
+            })
+            .when('/Wall', {
+                templateUrl: 'views/Wall.html',
+                controller: 'WallCtrl'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });
+    });/*//.factory('Card_resource', function($resource) {
+	return $resource("http://localhost\\:4567/card");
+    });*/

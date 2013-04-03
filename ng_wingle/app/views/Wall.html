@@ -6,16 +6,20 @@
   </ul>
 </div>
 
+
+
 <div class="title">
   <input type="text" ng-model="card.title"/>
 </div>
 <div class="description">
   <textarea ng-model="card.description"></textarea>
 </div>
-<button ng-click="cards.addCard(card)"/>Add</button>
+<button ng-click="cardsCtrl.addCard(card)"/>Add</button>
+
+
 
 <div class="card">
-  <ul ng-repeat="card in cards.getCards()">
+  <ul ng-repeat="card in cards">
     <div class="title_content">
       {{card.title}}
     </div>
