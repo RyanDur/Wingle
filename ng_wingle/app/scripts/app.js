@@ -1,5 +1,5 @@
 'use strict';
-angular.module('ngWingleApp',["ngResource", "ui"])
+angular.module('ngWingleApp',["ngResource", "ui",'$strap.directives'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
@@ -13,6 +13,6 @@ angular.module('ngWingleApp',["ngResource", "ui"])
             .otherwise({
                 redirectTo: '/'
             });
-    });/*//.factory('Card_resource', function($resource) {
-	return $resource("http://localhost\\:4567/card");
-    });*/
+    }).factory('Card_resource', function($resource) {
+	return $resource("http://localhost\\:4001/card");
+    });

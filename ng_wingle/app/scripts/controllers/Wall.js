@@ -2,39 +2,20 @@
 
 angular.module('ngWingleApp')
     .controller('WallCtrl', function ($scope, Cards) {
-	$scope.cards = Cards.getCards();
-	$scope.cardsCtrl = Cards;
+        $scope.cards = Cards.getCards();
+        $scope.cardsCtrl = Cards;
+        $scope.modal = {content: 'Hello Modal', saved: false};
     });
-
-
-    angular.module('plunker', ['ui.bootstrap']);
-
-    function AlertDemoCtrl($scope) {
-
-      $scope.alerts = [
-
-        { type: 'error', msg: 'Oh snap! Change a few things up and try submitting again.' }, 
-
-        { type: 'success', msg: 'Well done! You successfully read this important alert message.' }
-
-      ];
-
-
-
-      $scope.addAlert = function() {
-
-        $scope.alerts.push({msg: "Another alert!"});
-
-      };
-
-
-
-      $scope.closeAlert = function(index) {
-
-        $scope.alerts.splice(index, 1);
-
-      };
-
-
-
-    }
+$(function() {
+    $("html").removeClass("no-js").addClass("js");
+    var $window = $(window);
+    new FastClick(document.body);
+    $(document).ready(function($) {
+        // Disable certain links in docs
+        $('section [href^=#]').click(function (e) {
+            e.preventDefault();
+        });
+        // Make code pretty
+        window.prettyPrint && window.prettyPrint();
+    });
+});
