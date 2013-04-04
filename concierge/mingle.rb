@@ -14,6 +14,6 @@ end
 
 get '/card' do
   mingle = MingleParty.new
-  card = mingle.fetch_card(1)
+  card = mingle.fetch_cards
   jsonp card
 end
