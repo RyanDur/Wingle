@@ -12,8 +12,14 @@ use Rack::Cors do
   end
 end
 
-get '/card' do
+get '/cards' do
   mingle = MingleParty.new
-  card = mingle.fetch_card(1)
+  cards = mingle.fetch_cards
+  jsonp cards
+end
+
+get '/card/:number' do |number|
+  mingle = MingleParty.new
+  card = mingle.fetch_card(number)
   jsonp card
 end

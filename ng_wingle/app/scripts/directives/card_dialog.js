@@ -19,7 +19,7 @@ angular.module('ngWingleApp')
             //            replace: true,
             link: function (scope, element, attrs) {
 		scope.$watch(attrs.cardDialog, function(card){
-		    element.text('this is the card ' + scope.card );
+		    element.text('this is the card ' + card );
 		});
             }
         };
