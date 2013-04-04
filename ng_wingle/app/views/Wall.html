@@ -6,25 +6,15 @@
   </ul>
 </div>
 
+<div ng-controller="AlertDemoCtrl">
 
+  <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
 
-<div class="title">
-  <input type="text" ng-model="card.title"/>
+  <button class='btn' ng-click="addAlert()">Add Alert</button>
+
 </div>
-<div class="description">
-  <textarea ng-model="card.description"></textarea>
-</div>
-<button ng-click="cardsCtrl.addCard(card)"/>Add</button>
 
+  </body>
 
+</html>
 
-<div class="card">
-  <ul ng-repeat="card in cards">
-    <div class="title_content">
-      {{card.title}}
-    </div>
-    <div class="description_content">
-      {{card.description}}
-    </div>
-  </ul>
-</div>
