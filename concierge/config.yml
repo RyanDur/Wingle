@@ -1,4 +1,4 @@
-- host: 'http://10.2.101.224:4001'
+- host: 'http://localhost:4001'
   username: 'admin'
   password: 'p'
   project: 'mingle_test_project'
