@@ -6,6 +6,7 @@ angular.module('ngWingleApp')
         $scope.cardsCtrl = Cards;
         $scope.modal = {content: 'Hello Modal', saved: false};
     });
+
 $(function() {
     $("html").removeClass("no-js").addClass("js");
     var $window = $(window);

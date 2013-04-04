@@ -6,7 +6,7 @@ function puts(){
 angular.module('ngWingleApp')
     .factory('Cards', function (Card_resource) {
 
-        var cards = {card:{title:"Hello", description:"world"}};
+        var cards = Card_resource.query();
 
         // Public API here
         return {
@@ -15,9 +15,10 @@ angular.module('ngWingleApp')
             },
             addCard: function (card) {
                 card = Card_resource.save(card, function(){}, function error(response){
-                    return errors = response.data.errors;
+		    console.log('inside errors ' +response.data.errors);
+                    return card.errors = response.data.errors;
                 });
-                cards.push(card);
+                cards['cards'].push(card);
                 return card = {};
             }
         };

@@ -14,5 +14,5 @@ angular.module('ngWingleApp',["ngResource", "ui",'$strap.directives'])
                 redirectTo: '/'
             });
     }).factory('Card_resource', function($resource) {
-	return $resource("http://localhost\\:4001/card");
+	return $resource("http://localhost\\:4567/card");
     });
