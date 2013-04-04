@@ -18,3 +18,15 @@
 
 </html>
 
+<div class="card">
+  <ul ng-repeat="card in cards">
+    <div class="title_content">
+      {{card.title}}
+    </div>
+    <div class="description_content">
+      {{card.description}}
+    </div>
+  </ul>
+</div>
+
+<card-dialog></card-dialog>
