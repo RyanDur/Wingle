@@ -20,10 +20,10 @@
   <div class="bs-docs-example">
     <div class="well">
       <ul>
-        <li ng-repeat="card in cards">
+        <li ng-repeat="(cards,card) in resource">
           <button type="button" class="btn btn-large btn-primary" bs-modal="'views/partials/modal.html'">
             <div class="title_content">
-              {{card.title}}
+              {{card}}
             </div>
             <div class="description_content">
               {{card.description}}

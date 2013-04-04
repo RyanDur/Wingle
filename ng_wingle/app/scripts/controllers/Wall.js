@@ -2,7 +2,7 @@
 
 angular.module('ngWingleApp')
     .controller('WallCtrl', function ($scope, Cards) {
-        $scope.cards = Cards.getCards();
+        $scope.resource = Cards.getCards();
         $scope.cardsCtrl = Cards;
         $scope.modal = {content: 'Hello Modal', saved: false};
     });

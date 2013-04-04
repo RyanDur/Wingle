@@ -1,4 +1,4 @@
-- host: 'http://localhost:3000'
+- host: 'http://localhost:8080'
   username: 'admin'
   password: 'p'
-  project: 'mingle_test_project'
+  project: 'mingle_test_party'
