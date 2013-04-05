@@ -14,3 +14,6 @@
   <button class="btn" ng-click="dismiss()">Close</button>
   <button class="btn btn-primary" ng-click="modal.saved=true;dismiss()">Save changes</button>
 </div>
+<accordion ng-repeat="murmur in murmurs">   
+  <accordion-group title="murmur.author.name" >{{murmur.body}}</accordion-group>
+</accordion>
