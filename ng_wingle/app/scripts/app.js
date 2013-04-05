@@ -21,5 +21,5 @@ angular.module('resource_service',['ngResource'])
                          {cards: {method: 'GET'}});
     }).factory('Murmurs_resource', function($resource){
         return $resource("http://localhost\\:4567/murmurs", {},
-			{murmurs: {method: 'GET'}});
+                         {murmurs: {method: 'GET', isArray: true}});
     });
