@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngWingleApp',['resource_service', 'ui','$strap.directives'])
+angular.module('ngWingleApp',['resource_service', 'ui','$strap.directives', 'ui.bootstrap'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
