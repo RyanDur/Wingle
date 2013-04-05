@@ -1,6 +1,7 @@
 <div class="accordion-group">
     <div class="accordion-heading">
-      <a class="accordion-toggle" ng-click="select()">{{title}}</a>
+      <img src="http://localhost:4001{{image}}" alt="{{author}}" height="42" width="42"
+      class="accordion-toggle" ng-click="select()"/>
     </div>
     <div class="accordion-body collapse" ng-class="{in : selected}">
       <div class="accordion-inner" ng-transclude>

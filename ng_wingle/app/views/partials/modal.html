@@ -15,7 +15,7 @@
   <button class="btn btn-primary" ng-click="modal.saved=true;dismiss()">Save changes</button>
 </div>
 <accordion ng-repeat="murmur in murmurs">   
-  <accordion-group title="murmur.author.name" >
-  <img src="http://localhost:4001{{murmur.author.icon_path}}" alt="murmur.author.name" height="42" width="42"/>
+  <accordion-group image="murmur.author.icon_path" 
+  author="murmur.author.name">
   {{murmur.body}}</accordion-group>
 </accordion>
