@@ -24,5 +24,7 @@ end
 
 get '/murmurs' do
   murmurs = MingleParty.new.murmurs
+  puts "[DEBUG] murmurs => #{murmurs.inspect}"
+  
   jsonp murmurs
 end
