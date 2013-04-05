@@ -5,6 +5,12 @@ angular.module('ngWingleApp')
         $scope.resource = Cards.getCards();
         $scope.murmurs = Murmurs.getMurmurs();
         $scope.cardsCtrl = Cards;
+	$scope.dropdown = [
+            {text: 'Egghead', href: 'http://egghead.io/'},
+            {text: 'BootstrapCDN', href: 'http://www.bootstrapcdn.com/'},
+            {text: 'Beryllium Work', href: 'http://blog.berylliumwork.com/'}
+        ];
+
         $scope.modal = {content: 'Hello Modal', saved: false};
         $scope.popover ={
             content: "Hello Popover<br />This is a multiline message!",
