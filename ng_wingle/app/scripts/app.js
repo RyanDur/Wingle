@@ -14,7 +14,5 @@ angular.module('ngWingleApp',["ngResource", "ui",'$strap.directives'])
                 redirectTo: '/Wall'
             });
     }).factory('Card_resource', function($resource) {
-	return $resource("http://localhost\\:4567/cards",{}, {
-	    query: { method: 'GET', isArray:true},
-	    create: { method: 'POST' }});
+	return $resource("http://localhost\\:3000/cards");
     });
