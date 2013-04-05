@@ -7,7 +7,9 @@ angular.module('ngWingleApp')
             restrict:'E',
             transclude:true,
             scope:{
-                title:'='
+                title:'=',
+                image:'=',
+                author:'='
             },
             link:function (scope, element, attrs, accordionCtrl) {
                 accordionCtrl.addGroup(scope);
