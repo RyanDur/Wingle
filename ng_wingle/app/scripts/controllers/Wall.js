@@ -8,7 +8,8 @@ angular.module('ngWingleApp')
 	$scope.dropdown = [
             {text: 'Egghead', href: 'http://egghead.io/'},
             {text: 'BootstrapCDN', href: 'http://www.bootstrapcdn.com/'},
-            {text: 'Beryllium Work', href: 'http://blog.berylliumwork.com/'}
+            {text: 'Beryllium Work', href: 'http://blog.berylliumwork.com/'},
+            {text: 'API Reference', href: 'http://code.angularjs.org/0.9.16/docs-0.9.16/#!/api'}
         ];
 
         $scope.modal = {content: 'Hello Modal', saved: false};
