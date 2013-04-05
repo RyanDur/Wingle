@@ -1,21 +1,14 @@
 <div class="modal-header">
   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-  <h3 id="myModalLabel">Modal header</h3>
+  <h3 id="myModalLabel">{{card.name}}</h3>
 </div>
 <div class="modal-body">
   <form>
+    <p>{{card.number}}</p>
     <fieldset>
-      <legend>{{card.name}}</legend>
-      <input type="text" placeholder="Type something…" autofocus="autofocus" />
-      <span class="help-block">{{card.description}}</span>
-      <label class="checkbox">
-        <input type="checkbox"> Check me out
-      </label>
-      <button type="submit" class="btn">Submit</button>
+      <legend>{{card.description}}</legend>
     </fieldset>
   </form>
-  <p>{{card.number}}</p>
-  <br />
 </div>
 <div class="modal-footer">
   <button class="btn" ng-click="dismiss()">Close</button>
