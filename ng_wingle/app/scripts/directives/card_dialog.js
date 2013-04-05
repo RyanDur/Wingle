@@ -3,7 +3,6 @@
 angular.module('ngWingleApp')
     .directive('cardDialog', function () {
         return {
-            restrict: 'E',
             //   transclude: true,
             scope: {
                 // the title uses the data-binding from the parent scope
@@ -16,11 +15,8 @@ angular.module('ngWingleApp')
                 visible: '='
             },
             templateUrl: 'views/partials/dialog.html',
-            //            replace: true,
-            link: function (scope, element, attrs) {
-		scope.$watch(attrs.cardDialog, function(card){
-		    element.text('this is the card ' + card );
-		});
-            }
+	    link: function(scope, element, attrs) {
+		element.bind();
+	    }
         };
     });

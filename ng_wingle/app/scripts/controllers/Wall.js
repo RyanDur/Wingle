@@ -1,27 +1,29 @@
 'use strict';
 
 angular.module('ngWingleApp')
-  .controller('WallCtrl', function ($scope, Cards, Murmurs) {
-    $scope.resource = Cards.getCards();
-    $scope.murmurs = Murmurs.getMurmurs();
-    $scope.cardsCtrl = Cards;
-    $scope.modal = {content: 'Hello Modal', saved: false};
-    $scope.popover ={
-      content: "Hello Popover<br />This is a multiline message!",
-      saved: false
-    };
-  });
+    .controller('WallCtrl', function ($scope, Cards, Murmurs, AccordionDemoCtrl) {
+	$scope.AccordionDemoCtrl = AccordionDemoCtrl;
+        $scope.resource = Cards.getCards();
+        $scope.murmurs = Murmurs.getMurmurs();
+        $scope.cardsCtrl = Cards;
+        $scope.modal = {content: 'Hello Modal', saved: false};
+        $scope.popover ={
+            content: "Hello Popover<br />This is a multiline message!",
+            saved: false
+        };
+    });
 
 $(function() {
-  $("html").removeClass("no-js").addClass("js");
-  var $window = $(window);
-  new FastClick(document.body);
-  $(document).ready(function($) {
-    // Disable certain links in docs
-    $('section [href^=#]').click(function (e) {
-        e.preventDefault();
+    $("html").removeClass("no-js").addClass("js");
+    var $window = $(window);
+    new FastClick(document.body);
+    $(document).ready(function($) {
+        // Disable certain links in docs
+        $('section [href^=#]').click(function (e) {
+            e.preventDefault();
+        });
+        // Make code pretty
+        window.prettyPrint && window.prettyPrint();
     });
-    // Make code pretty
-    window.prettyPrint && window.prettyPrint();
-  });
+
 });
