@@ -10,16 +10,16 @@ angular.module('ngWingleApp')
         // Public API here
         return {
             getCards: function() {
-                return Card_resource.query(function(data) {
+                return Card_resource.get(function(data) {
                     resource = data;
                 });
 
             },
             addCard: function (card) {
-                card = Card_resource.save(card, function(){}, function error(response){
+/*                card = Card_resource.create(card, function(){}, function error(response){
                     return card.errors = response.data.errors;
-                });
-                cards.push(card);
+                });*/
+                resource.push(card);
                 return card = {};
             }
         };
