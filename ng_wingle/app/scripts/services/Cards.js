@@ -5,21 +5,19 @@ function puts(){
 }
 angular.module('ngWingleApp')
     .factory('Cards', function (Card_resource) {
-        var resource = {};
+        var resource = Card_resource.query();
 
         // Public API here
         return {
             getCards: function() {
-                return Card_resource.query(function(data) {
-                    resource = data;
-                });
+                return resource;
 
             },
             addCard: function (card) {
                 card = Card_resource.save(card, function(){}, function error(response){
                     return card.errors = response.data.errors;
                 });
-                cards.push(card);
+                resource.push(card);
                 return card = {};
             }
         };
