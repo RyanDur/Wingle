@@ -5,7 +5,7 @@ function puts(){
 }
 angular.module('ngWingleApp')
   .factory('Cards', function (Card_resource) {
-    var resource = Card_resource.get();
+    var resource = Card_resource.cards();
     // Public API here
     return {
       getCards: function() {
