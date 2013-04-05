@@ -5,6 +5,10 @@ angular.module('ngWingleApp')
         $scope.resource = Cards.getCards();
         $scope.cardsCtrl = Cards;
         $scope.modal = {content: 'Hello Modal', saved: false};
+        $scope.popover ={
+            content: "Hello Popover<br />This is a multiline message!",
+            saved: false
+          }
     });
 
 $(function() {
@@ -20,3 +24,5 @@ $(function() {
         window.prettyPrint && window.prettyPrint();
     });
 });
+
+

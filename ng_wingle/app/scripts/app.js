@@ -11,7 +11,7 @@ angular.module('ngWingleApp',["ngResource", "ui",'$strap.directives'])
                 controller: 'WallCtrl'
             })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: '/Wall'
             });
     }).factory('Card_resource', function($resource) {
 	return $resource("http://localhost\\:4567/cards",{}, {

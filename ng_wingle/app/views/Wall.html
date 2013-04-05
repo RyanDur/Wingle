@@ -1,5 +1,17 @@
-<div class="container">
+<br/>
+<br/>
+<br/>
+<br/>
+<!-- You can also use a simple object {title:'', content:'', etc.} instead of a partial/template -->
+<button type="button" class="btn" bs-popover="popover">B button</button>
+ 
+<!-- Force close others with data-unique attribute -->
+<button type="button" class="btn" data-unique="1" bs-popover="views/partials/popover.html">C button</button>
 
+<br/>
+<br/><br/>
+
+<div class="container">
   <div class="error_list">
     <ul ng-repeat="(key, value) in cards.errors">
       <li ng-repeat="item in value">
@@ -7,32 +19,22 @@
       </li>
     </ul>
   </div>
+</div>
 
-  <div class="title">
-    <input type="text" ng-model="card.title"/>
+<button type="button" class="btn btn-large btn-primary" bs-modal="'views/partials/modal.html'">Show this card</button>
+<div class="bs-docs-example">
+  <div class="well">
+    <ul>
+      <li ng-repeat="(cards,card) in resource">
+        <button type="button" class="btn btn-large btn-primary" bs-modal="'views/partials/modal.html'">
+          <div class="title_content">
+            {{card}}
+          </div>
+          <div class="description_content">
+            {{card.description}}
+          </div>
+        </button>
+      </li>
+    </ul>
   </div>
-  <div class="description">
-    <textarea ng-model="card.description"></textarea>
-  </div>
-  <button ng-click="cardsCtrl.addCard(card)">Add</button>
-
-
-  <div class="bs-docs-example">
-    <div class="well">
-      <ul>
-        <li ng-repeat="(cards,card) in resource">
-          <button type="button" class="btn btn-large btn-primary" bs-modal="'views/partials/modal.html'">
-            <div class="title_content">
-              {{card}}
-            </div>
-            <div class="description_content">
-              {{card.description}}
-            </div>
-          </button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-
 </div>

@@ -5,19 +5,17 @@
 <div class="modal-body">
   <form>
     <fieldset>
-      <legend>Legend</legend>
-      <label>Label name</label>
+      <legend>{{card.name}}</legend>
       <input type="text" placeholder="Type something…" autofocus="autofocus" />
-      <span class="help-block">Example block-level help text here.</span>
+      <span class="help-block">{{card.description}}</span>
       <label class="checkbox">
         <input type="checkbox"> Check me out
       </label>
       <button type="submit" class="btn">Submit</button>
     </fieldset>
   </form>
-  <p>{{modal.content}}</p>
+  <p>{{card.number}}</p>
   <br />
-  <pre>2 + 3 = {{ 2 + 3 }}</pre>
 </div>
 <div class="modal-footer">
   <button class="btn" ng-click="dismiss()">Close</button>
