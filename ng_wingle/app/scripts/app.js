@@ -1,5 +1,6 @@
 'use strict';
-angular.module('ngWingleApp',['resource_service', 'ui.bootstrap','$strap.directives'])
+
+angular.module('ngWingleApp',['resource_service', 'ui','$strap.directives'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
@@ -10,8 +11,12 @@ angular.module('ngWingleApp',['resource_service', 'ui.bootstrap','$strap.directi
                 templateUrl: 'views/Wall.html',
                 controller: 'WallCtrl'
             })
+            .when('/accordion', {
+              templateUrl: 'views/accordion.html',
+              controller: 'AccordionController'
+            })
             .otherwise({
-                redirectTo: '/Wall'
+                redirectTo: '/'
             });
     });
 

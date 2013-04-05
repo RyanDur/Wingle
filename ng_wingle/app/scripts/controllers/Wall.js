@@ -1,8 +1,7 @@
 'use strict';
 
 angular.module('ngWingleApp')
-    .controller('WallCtrl', function ($scope, Cards, Murmurs, AccordionDemoCtrl) {
-	$scope.AccordionDemoCtrl = AccordionDemoCtrl;
+    .controller('WallCtrl', function ($scope, Cards, Murmurs) {
         $scope.resource = Cards.getCards();
         $scope.murmurs = Murmurs.getMurmurs();
         $scope.cardsCtrl = Cards;
