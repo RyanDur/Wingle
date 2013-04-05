@@ -9,7 +9,7 @@ angular.module('ngWingleApp')
         $scope.popover ={
             content: "Hello Popover<br />This is a multiline message!",
             saved: false
-          }
+          };
     });
 
 $(function() {
