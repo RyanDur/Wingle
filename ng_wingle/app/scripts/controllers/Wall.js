@@ -3,6 +3,7 @@
 angular.module('ngWingleApp')
     .controller('WallCtrl', function ($scope, Cards) {
         $scope.resource = Cards.getCards();
+        console.log($scope.resource);
         $scope.cardsCtrl = Cards;
         $scope.modal = {content: 'Hello Modal', saved: false};
         $scope.popover ={
