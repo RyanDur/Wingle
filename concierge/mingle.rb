@@ -13,13 +13,16 @@ use Rack::Cors do
 end
 
 get '/cards' do
-  mingle = MingleParty.new
-  cards = mingle.fetch_cards
+  cards = MingleParty.new.fetch_cards
   jsonp cards
 end
 
 get '/card/:number' do |number|
-  mingle = MingleParty.new
-  card = mingle.fetch_card(number)
+  car = MingleParty.new.fetch_card(number)
   jsonp card
+end
+
+get '/murmurs' do
+  murmurs = MingleParty.new.murmurs
+  jsonp murmurs
 end
