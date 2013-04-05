@@ -11,7 +11,6 @@ angular.module('ngWingleApp')
         return {
             getCards: function() {
                 return resource;
-
             },
             addCard: function (card) {
                 card = Card_resource.save(card, function(){}, function error(response){
