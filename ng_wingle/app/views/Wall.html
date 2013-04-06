@@ -32,4 +32,26 @@
     </ul>
   </div>
 
+  <div class="bs-docs-example well">
+    <ul>
+      <li ng-repeat="murmur in murmurs">
+        <button type="button" class="btn btn-large btn-primary" bs-modal="'views/partials/modal.html'">
+          {{murmur.body}}
+        </button>
+      </li>
+    </ul>
+  </div>
+
+
+    <label class="checkbox">
+      <input type="checkbox" ng-model="oneAtATime"/>
+      Open only one at a time
+    </label>
+
+    <accordian close-others="oneAtATime">
+      <accordion-group heading="Static Header">
+        This content is straight in the template.
+      </accordion-group>
+    </accordian>
+
 </div>

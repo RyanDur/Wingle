@@ -9,11 +9,12 @@
     "angular-cookies": "~1.0.5",
     "angular-sanitize": "~1.0.5",
     "angular-ui": "~0.4.0",
-    "angular-bootstrap":"~0.2.0",
-    "bootstrap": ""    
+    "angular-bootstrap": "~0.2.0",
+    "bootstrap": ""
   },
   "devDependencies": {
     "angular-mocks": "~1.0.5",
-    "angular-scenario": "~1.0.5"
+    "angular-scenario": "~1.0.5",
+    "angular-bootstrap": "~0.2.0"
   }
 }
